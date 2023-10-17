@@ -16,9 +16,12 @@ SELECT * FROM students WHERE date_of_birth LIKE '1990-%';
 
 2-
 
-SELECT * FROM `courses` WHERE `cfu` > 10
+SELECT * FROM `courses` WHERE `cfu` > 10;
 
 3-
 
-SELECT * FROM `students` WHERE `date_of_birth` <= '1993/10/17';
+SELECT * FROM `students` WHERE `date_of_birth` < '1993/10/16';
 
+4-
+
+SELECT * FROM `courses` WHERE `period` = 'I semestre' AND `year` = 1;
