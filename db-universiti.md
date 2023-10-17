@@ -10,6 +10,11 @@ laurea (286)
 8. Quanti sono gli insegnanti che non hanno un numero di telefono?  -->
 
 
-ES. 1
+1-
 
 SELECT * FROM students WHERE date_of_birth LIKE '1990-%';
+
+2-
+
+SELECT * FROM `courses` WHERE `cfu` > 10
+
