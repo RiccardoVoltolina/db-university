@@ -8,3 +8,8 @@ laurea (286)
 6. Selezionare tutti i corsi di laurea magistrale (38)
 7. Da quanti dipartimenti è composta l'università? (12)
 8. Quanti sono gli insegnanti che non hanno un numero di telefono?  -->
+
+
+ES. 1
+
+SELECT * FROM students WHERE date_of_birth LIKE '1990-%';
