@@ -34,4 +34,8 @@ SELECT * FROM `exams` WHERE `date` = '2020-06-20' AND `hour` > '14:00:00';
 
 SELECT * FROM `degrees` WHERE `name` LIKE '%Corso di Laurea Magistrale%';
 
+7-
+
+SELECT * FROM `departments` WHERE `id` IS NOT NULL;
+
 
