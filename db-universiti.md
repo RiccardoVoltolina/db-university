@@ -25,3 +25,9 @@ SELECT * FROM `students` WHERE `date_of_birth` < '1993/10/16';
 4-
 
 SELECT * FROM `courses` WHERE `period` = 'I semestre' AND `year` = 1;
+
+5-
+
+SELECT * FROM `exams` WHERE `date` = '2020-06-20' AND `hour` > '14:00:00';
+
+
