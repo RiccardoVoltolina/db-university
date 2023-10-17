@@ -38,4 +38,8 @@ SELECT * FROM `degrees` WHERE `name` LIKE '%Corso di Laurea Magistrale%';
 
 SELECT * FROM `departments` WHERE `id` IS NOT NULL;
 
+8-
+
+SELECT * FROM `teachers` WHERE `phone` IS NULL;
+
 
