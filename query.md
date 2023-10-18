@@ -68,6 +68,8 @@ Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono
 
 
 Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+
+
 Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
 BONUS: Selezionare per ogni studente il numero di tentativi sostenuti per ogni esame, stampando anche il voto massimo. Successivamente, filtrare i tentativi con voto minimo 18. -->
 
@@ -117,3 +119,13 @@ FROM students
 JOIN degrees ON degree_id = degrees.id
 JOIN departments ON department_id = departments.id
 ORDER BY students.name, students.surname ASC;
+
+- Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+
+SELECT degrees.name AS degree_name, courses.name AS course_name, teachers.name AS teacher_name, teachers.surname AS teacher_surname
+FROM course_teacher
+JOIN courses ON course_id = courses.id
+JOIN degrees ON degree_id = degrees.id
+JOIN teachers ON teacher_id = teachers.id
+
+- Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
