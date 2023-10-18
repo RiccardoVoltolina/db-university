@@ -65,6 +65,8 @@ Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
 
 
 Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome
+
+
 Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
 Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
 BONUS: Selezionare per ogni studente il numero di tentativi sostenuti per ogni esame, stampando anche il voto massimo. Successivamente, filtrare i tentativi con voto minimo 18. -->
@@ -108,3 +110,10 @@ SELECT teacher_id, teachers.name AS teacher_name, course_teacher.course_id AS co
 JOIN teachers ON teacher_id = 44
 WHERE teachers.id = 44;
 
+- Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico per cognome e nome
+
+SELECT students.name, students.surname, degrees.name AS degree_name, degrees.level AS degree_level, departments.name AS department_name
+FROM students
+JOIN degrees ON degree_id = degrees.id
+JOIN departments ON department_id = departments.id
+ORDER BY students.name, students.surname ASC;
