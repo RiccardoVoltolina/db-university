@@ -130,10 +130,11 @@ JOIN teachers ON teacher_id = teachers.id
 
 - Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
 
-## errore
 
-SELECT degrees.name AS degree_name, courses.name AS course_name, teachers.name AS teacher_name, teachers.surname AS teacher_surname
-FROM course_teacher
-JOIN courses ON course_id = courses.id
-JOIN degrees ON degree_id = degrees.id
-JOIN teachers ON teacher_id = teachers.id;
+SELECT DISTINCT `teachers`.`name` AS `teacher_name`, `teachers`.`surname` AS `teacher_surname`, `departments`.`name` AS `department_name`
+FROM `course_teacher`
+JOIN `courses` ON `course_id` = `courses`.`id`
+JOIN `degrees` ON `degree_id` = `degrees`.`id`
+JOIN `departments` ON `department_id` = `departments`.`id`
+JOIN `teachers` ON `teacher_id` = `teachers`.`id`
+WHERE `departments`.`name` = 'Dipartimento di Matematica'
